@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.big.light" >
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.FLASHLIGHT"></uses-permission>
+    <uses-feature android:name="android.hardware.camera" android:required="false"></uses-feature>
+    <uses-feature android:name="android.hardware.camera.flash"></uses-feature>
+    <uses-feature android:name="android.hardware.camera" android:required="false"></uses-feature>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.big.light.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.big.light.SettingActivity"
+            android:label="@string/title_about"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.big.light.MainActivity" >
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.big.light.MainActivity" />
+        </activity>
+        <activity android:name="com.big.light.WebviewActivity"
+            android:label="@string/title_website"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.big.light.SettingActivity" >
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.big.light.MainActivity" />
+        </activity>
+
+        <receiver android:name="com.big.Models.InstallReferrerReceiver">
+
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER">
+                </action>
+            </intent-filter>
+
+        </receiver>
+    </application>
+
+</manifest>

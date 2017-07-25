@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.big.light.MainActivity" >
+
+    <ImageButton
+        android:id="@+id/btnFlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100px"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:src="@drawable/flash_off" />
+    <ImageButton
+        android:id="@+id/btnSetting"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50px"
+        android:layout_marginBottom="150px"
+        android:background="@null"
+        android:visibility="invisible"
+        android:src="@drawable/ic_settngs" />
+    <ImageButton
+        android:id="@+id/btnWebview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50px"
+        android:layout_marginBottom="150px"
+        android:background="@null"
+        android:visibility="invisible"
+        android:src="@drawable/ic_website" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:id="@+id/layoutWebview"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:id="@+id/btnClose"
+                android:text="Close"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorBackground"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webView2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50px"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:visibility="invisible"
+        android:textColor="@android:color/holo_blue_dark" />
+
+</RelativeLayout>

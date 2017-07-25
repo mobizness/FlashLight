@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.big.light.SettingActivity" >
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:id="@+id/relativeLayout1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_wifi"
+                        android:id="@+id/imgSetting"/>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/textView1_1"
+                        android:text="Wifi Turn On/Off"
+                        android:gravity="center_vertical"
+                        android:layout_toRightOf="@+id/imgSetting"
+                        android:layout_toLeftOf="@+id/switch1"
+                        android:layout_marginLeft="100px"
+                        android:layout_marginRight="10px"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorLetter"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:shadowColor="@color/colorPrimary"
+                        android:id="@+id/switch1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:id="@+id/relativeLayout2">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_setting"
+                        android:id="@+id/imgSetting2"/>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/textView2_1"
+                        android:text="Send SMS"
+                        android:gravity="center_vertical"
+                        android:layout_toRightOf="@+id/imgSetting2"
+                        android:layout_marginLeft="100px"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorLetter"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:visibility="invisible"
+                    android:id="@+id/relativeLayout3">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_website"
+                        android:id="@+id/imgSetting3"/>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/textView3_1"
+                        android:text="Go to WAP site"
+                        android:gravity="center_vertical"
+                        android:layout_toRightOf="@+id/imgSetting3"
+                        android:layout_marginLeft="100px"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorLetter"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <!-- The navigation drawer -->
+
+</RelativeLayout>
